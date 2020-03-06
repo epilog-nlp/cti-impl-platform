@@ -1,0 +1,48 @@
+<Project>
+  
+  <!-- Framework/Version Information -->
+  <PropertyGroup>
+    <Version>0.0.1-alpha</Version>
+  </PropertyGroup>
+
+  <!-- Debug/Build Concerns -->
+  <PropertyGroup>
+    <DebugType>portable</DebugType>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <IncludeSymbols>true</IncludeSymbols>
+  </PropertyGroup>  
+  
+  <!-- Packaging Information -->
+  <PropertyGroup>
+    <SymbolPackageFormat>snupkg</SymbolPackageFormat>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
+    <Copyright>Copyright ©2020 Ian Schlarman</Copyright>
+    <Authors>Ian Schlarman</Authors>
+  </PropertyGroup>
+  
+  <!-- GitHub Details -->
+  <PropertyGroup>
+    <PackageProjectUrl>https://github.com/kaylerich/cti-impl-platform</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/kaylerich/cti-impl-platform.git</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PublishRepositoryUrl>true</PublishRepositoryUrl>
+  </PropertyGroup>
+
+  <!-- PSDK References -->
+  <PropertyGroup Condition="'$(PsdkBin)' == ''">
+    <PsdkBin>$(RepoRoot)refs\psdk\</PsdkBin>
+  </PropertyGroup>
+  
+  
+  <ItemGroup>
+    <PackageReference Include="Microsoft.SourceLink.GitHub" Version="1.0.0" PrivateAssets="All" />
+  </ItemGroup>
+  
+  <!-- Set Project Exclusions -->
+  <PropertyGroup>
+    <DefaultItemExcludes>$(DefaultItemExcludes);$(MSBuildProjectDirectory)/obj/**/*</DefaultItemExcludes>
+    <DefaultItemExcludes>$(DefaultItemExcludes);$(MSBuildProjectDirectory)/bin/**/*</DefaultItemExcludes>
+    <DefaultItemExcludes>$(DefaultItemExcludes);$(MSBuildProjectDirectory)/*.vspscc</DefaultItemExcludes>
+  </PropertyGroup>
+</Project>
