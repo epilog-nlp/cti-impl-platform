@@ -5,3 +5,5 @@
 /src/Models/.vs/Models
 /src/Models/nuget.config
 /src/Models/Cti.Genesys.Platform.Models/obj
+/refs/psdk
+/.vs

@@ -27,13 +27,7 @@
     <RepositoryUrl>https://github.com/kaylerich/cti-impl-platform.git</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
     <PublishRepositoryUrl>true</PublishRepositoryUrl>
-  </PropertyGroup>
-
-  <!-- PSDK References -->
-  <PropertyGroup Condition="'$(PsdkBin)' == ''">
-    <PsdkBin>$(RepoRoot)refs\psdk\</PsdkBin>
-  </PropertyGroup>
-  
+  </PropertyGroup>  
   
   <ItemGroup>
     <PackageReference Include="Microsoft.SourceLink.GitHub" Version="1.0.0" PrivateAssets="All" />

@@ -1,7 +1,23 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
+    <RootNamespace>Platform.Models</RootNamespace>
   </PropertyGroup>
+
+  <PropertyGroup>
+    <Description>Contains models common to all PSDK protocols.</Description>
+    <PackageTags>PSDK Models Protocols CTI Genesys</PackageTags>
+  </PropertyGroup>
+  
+  <ItemGroup>
+    <PackageReference Include="Cti.Genesys.Models" Version="0.0.1-alpha" />
+  </ItemGroup>
+  
+  <ItemGroup>
+    <Reference Include="Genesyslab.Platform.Commons.Protocols">
+      <HintPath>..\..\..\refs\psdk\Genesyslab.Platform.Commons.Protocols.dll</HintPath>
+    </Reference>
+  </ItemGroup>
 
 </Project>
