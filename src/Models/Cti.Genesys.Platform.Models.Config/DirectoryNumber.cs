@@ -15,7 +15,7 @@ namespace Platform.Models.Config
         /// <summary>
         /// Directory Number. Must be unique accross the parent Switch.
         /// </summary>
-        public string Number { get; set; }
+        public string Number { get; set; } = string.Empty;
 
         /// <summary>
         /// The type of DN this represents.

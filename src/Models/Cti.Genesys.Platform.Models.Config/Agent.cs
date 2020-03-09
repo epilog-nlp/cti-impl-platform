@@ -4,6 +4,7 @@
 using Cti.Models.Config;
 using Genesyslab.Platform.ApplicationBlocks.ConfigurationObjectModel.CfgObjects;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace Platform.Models.Config
 {
@@ -30,12 +31,12 @@ namespace Platform.Models.Config
         /// <summary>
         /// The Agent Logins assigned to this Agent.
         /// </summary>
-        public IEnumerable<IAgentLoginAssociation> Logins { get; set; }
+        public IEnumerable<IAgentLoginAssociation> Logins { get; set; } = Enumerable.Empty<IAgentLoginAssociation>();
 
         /// <summary>
         /// The Skills and associated proficiencies assigned to this Agent.
         /// </summary>
-        public IEnumerable<IAgentSkillLevel> Skills { get; set; }
+        public IEnumerable<IAgentSkillLevel> Skills { get; set; } = Enumerable.Empty<IAgentSkillLevel>();
     }
 
     /// <summary>

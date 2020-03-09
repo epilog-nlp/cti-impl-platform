@@ -18,7 +18,7 @@ namespace Platform.Models.Config
         /// <summary>
         /// Port exposing this <see cref="Server"/>.
         /// </summary>
-        public string Port { get; set; }
+        public string Port { get; set; } = string.Empty;
 
         /// <summary>
         /// DBID of the <see cref="Application"/> defining the backup <see cref="Server"/>.

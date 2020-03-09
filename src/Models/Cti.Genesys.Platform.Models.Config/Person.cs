@@ -16,7 +16,7 @@ namespace Platform.Models.Config
         /// <summary>
         /// The LDAP (or equivalent) Username associated with the Person. Used is <see cref="UsingExternalAuth"/> is enabled.
         /// </summary>
-        public string ExternalId { get; set; }
+        public string ExternalId { get; set; } = string.Empty;
 
         /// <summary>
         /// The password used to login. Value is only used to set the password on an Create/Update request.
@@ -47,17 +47,17 @@ namespace Platform.Models.Config
         /// <summary>
         /// The Person's first name.
         /// </summary>
-        public string FirstName { get; set; }
+        public string FirstName { get; set; } = string.Empty;
 
         /// <summary>
         /// The Person's last name.
         /// </summary>
-        public string LastName { get; set; }
+        public string LastName { get; set; } = string.Empty;
 
         /// <summary>
         /// The Person's email address.
         /// </summary>
-        public string Email { get; set; }
+        public string Email { get; set; } = string.Empty;
 
         /// <summary>
         /// The DBID of the Folder location. When creating a new object, this must be set to the correct DBID of the target Folder.
@@ -73,7 +73,7 @@ namespace Platform.Models.Config
         /// <remarks>
         /// Required for Update.
         /// </remarks>
-        public string FolderPath { get; set; }
+        public string FolderPath { get; set; } = string.Empty;
 
         /// <summary>
         /// Flag indicating the Person is an Agent. Can only be set on creation.
@@ -83,7 +83,7 @@ namespace Platform.Models.Config
         /// <summary>
         /// Name of the Config Server object.
         /// </summary>
-        public string Name { get; set; }
+        public string Name { get; set; } = string.Empty;
 
         /// <summary>
         /// The state of the Config Server object.

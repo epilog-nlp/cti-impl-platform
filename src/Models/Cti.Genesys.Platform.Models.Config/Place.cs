@@ -4,6 +4,7 @@
 using Cti.Models.Config;
 using Genesyslab.Platform.ApplicationBlocks.ConfigurationObjectModel.CfgObjects;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace Platform.Models.Config
 {
@@ -15,12 +16,12 @@ namespace Platform.Models.Config
         /// <summary>
         /// DBIDs of <see cref="DirectoryNumber"/> items operated by this <see cref="Place"/> object.
         /// </summary>
-        public IEnumerable<int> DnDbids { get; set; }
+        public IEnumerable<int> DnDbids { get; set; } = Enumerable.Empty<int>();
 
         /// <summary>
         /// Name of Config Server object.
         /// </summary>
-        public string Name { get; set; }
+        public string Name { get; set; } = string.Empty;
 
         /// <summary>
         /// State of the Config Server object.

@@ -35,7 +35,7 @@ namespace Platform.Models.Config
         /// <summary>
         /// Name of the Config Server object.
         /// </summary>
-        public string Name { get; set; }
+        public string Name { get; set; } = string.Empty;
 
         /// <summary>
         /// The state of the Config Server object.

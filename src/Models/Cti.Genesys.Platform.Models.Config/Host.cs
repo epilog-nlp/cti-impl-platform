@@ -14,12 +14,12 @@ namespace Platform.Models.Config
         /// <summary>
         /// IP Address of the Host.
         /// </summary>
-        public string IpAddress { get; set; }
+        public string IpAddress { get; set; } = string.Empty;
 
         /// <summary>
         /// Name of the Config Server Host object.
         /// </summary>
-        public string Name { get; set; }
+        public string Name { get; set; } = string.Empty;
 
         /// <summary>
         /// The state of the Config Server object.
