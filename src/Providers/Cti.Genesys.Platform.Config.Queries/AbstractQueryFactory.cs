@@ -7,7 +7,7 @@ using System;
 using System.Collections.Generic;
 using System.Collections.Immutable;
 
-namespace Cti.Genesys.Platform.Config.Queries
+namespace Cti.Platform.Config.Queries
 {
     using static ReflectionResources;
 
@@ -17,6 +17,15 @@ namespace Cti.Genesys.Platform.Config.Queries
     public static class AbstractQueryFactory
     {
         /// <summary>
+        /// Constructs a delegate capable of retrieving all Configuration Objects of type <typeparamref name="TCfgObject"/> using a provided Service.
+        /// </summary>
+        /// <typeparam name="TCfgObject">The type of Configuration Object the delegate is specialized for.</typeparam>
+        /// <returns>A delegate which can be invoked to retrieve all Configuration Objects of type <typeparamref name="TCfgObject"/>.</returns>
+        public static Func<IConfService, IEnumerable<TCfgObject>> BuildGetAllQuery<TCfgObject>()
+            where TCfgObject : CfgObject
+            => svc => RetrieveMultipleObjectsDelegate<TCfgObject>()(svc, CreateQuery(svc, ObjectToQueryMap[typeof(TCfgObject)]));
+
+        /// <summary>
         /// Constructs a delegate capable of retrieving all Configuration Objects of type <typeparamref name="TCfgObject"/> using the provided <paramref name="service"/>.
         /// </summary>
         /// <typeparam name="TCfgObject">The type of Configuration Object the delegate is specialized for.</typeparam>
@@ -24,7 +33,7 @@ namespace Cti.Genesys.Platform.Config.Queries
         /// <returns>A delegate which can be invoked to retrieve all Configuration Objects of type <typeparamref name="TCfgObject"/>.</returns>
         public static Func<IEnumerable<TCfgObject>> BuildGetAllQuery<TCfgObject>(this IConfService service)
             where TCfgObject : CfgObject
-            => () => RetrieveMultipleObjectsDelegate<TCfgObject>()(service, CreateQuery(service, ObjectToQueryMap[typeof(TCfgObject)]));
+            => () => BuildGetAllQuery<TCfgObject>()(service);
 
         internal static CfgFilterBasedQuery CreateQuery(IConfService service, Type queryType)
             => queryType.GetConstructor(new[] { QueryConstructorArgument })

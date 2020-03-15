@@ -7,7 +7,7 @@ using System;
 using System.Collections.Immutable;
 using System.Linq;
 
-namespace Cti.Genesys.Platform.Config.Queries
+namespace Cti.Platform.Config.Queries
 {
     using static AbstractQueryFactory;
     using static ReflectionResources;
@@ -17,6 +17,16 @@ namespace Cti.Genesys.Platform.Config.Queries
     /// </summary>
     public static class DbidQueryFactory
     {
+
+        /// <summary>
+        /// Constructs a delegate capable of retrieving a Configuration Object of type <typeparamref name="TCfgObject"/> by its DBID.
+        /// </summary>
+        /// <typeparam name="TCfgObject">The type of Configuration Object to retrieve.</typeparam>
+        /// <returns>A delegate which can be invoked to retrieve a Config Object with the provided DBID.</returns>
+        public static Func<IConfService, int, TCfgObject> BuildDbidQuery<TCfgObject>()
+            where TCfgObject : CfgObject
+            => (svc, dbid) => RetrieveObjectDelegate<TCfgObject>()(svc, CreateDbidQuery(svc, ObjectToQueryMap[typeof(TCfgObject)], dbid));
+
         /// <summary>
         /// Constructs a delegate capable of retrieving a Configuration Object of type <typeparamref name="TCfgObject"/> by its DBID.
         /// </summary>
@@ -25,7 +35,7 @@ namespace Cti.Genesys.Platform.Config.Queries
         /// <returns>A delegate which can be invoked to retrieve a Config Object with the provided DBID.</returns>
         public static Func<int, TCfgObject> BuildDbidQuery<TCfgObject>(this IConfService service)
             where TCfgObject : CfgObject
-            => dbid => RetrieveObjectDelegate<TCfgObject>()(service, CreateDbidQuery(service, ObjectToQueryMap[typeof(TCfgObject)], dbid));
+            => dbid => BuildDbidQuery<TCfgObject>()(service, dbid);
 
         private static CfgFilterBasedQuery CreateDbidQuery(IConfService service, Type queryType, int dbid)
         {

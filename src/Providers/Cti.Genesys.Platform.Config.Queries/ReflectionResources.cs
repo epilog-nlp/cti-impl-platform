@@ -8,7 +8,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
 
-namespace Cti.Genesys.Platform.Config.Queries
+namespace Cti.Platform.Config.Queries
 {
     internal static class ReflectionResources
     {
