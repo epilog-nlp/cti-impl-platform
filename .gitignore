@@ -8,3 +8,13 @@
 /refs/psdk
 /.vs
 /src/Models/Cti.Genesys.Platform.Models.Config/obj
+/src/Adapters/.vs/Adapters
+/src/Adapters/Cti.Genesys.Platform.Adapters/obj
+/src/Providers/.vs/Providers
+/src/Providers/Cti.Genesys.Platform/bin/Debug/netstandard2.0
+/src/Providers/Cti.Genesys.Platform/obj
+/src/Providers/Cti.Genesys.Platform.Config/obj
+/src/Providers/Cti.Genesys.Platform.Config.Queries/bin/Debug/netstandard2.0
+/src/Providers/Cti.Genesys.Platform.Config.Queries/obj
+/src/Providers/Cti.Genesys.Platform.Repos/obj
+/src/Providers/nuget.config

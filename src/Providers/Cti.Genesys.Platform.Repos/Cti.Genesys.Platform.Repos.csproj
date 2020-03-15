@@ -1,0 +1,18 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <RootNamespace>Cti.Platform.Repos</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Cti.Genesys.Repos.Contracts" Version="0.0.1-beta" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="Genesyslab.Platform.Commons.Protocols">
+      <HintPath>..\..\..\refs\psdk\Genesyslab.Platform.Commons.Protocols.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>

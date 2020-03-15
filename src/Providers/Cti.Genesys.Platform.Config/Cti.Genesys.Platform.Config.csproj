@@ -1,0 +1,24 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <RootNamespace>Cti.Platform.Config</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Cti.Genesys.Platform\Cti.Genesys.Platform.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="Genesyslab.Platform.Commons">
+      <HintPath>..\..\..\refs\psdk\Genesyslab.Platform.Commons.dll</HintPath>
+    </Reference>
+    <Reference Include="Genesyslab.Platform.Commons.Protocols">
+      <HintPath>..\..\..\refs\psdk\Genesyslab.Platform.Commons.Protocols.dll</HintPath>
+    </Reference>
+    <Reference Include="Genesyslab.Platform.Configuration.Protocols">
+      <HintPath>..\..\..\refs\psdk\Genesyslab.Platform.Configuration.Protocols.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>
