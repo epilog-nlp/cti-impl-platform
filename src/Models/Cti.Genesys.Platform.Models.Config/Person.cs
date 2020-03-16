@@ -16,7 +16,7 @@ namespace Platform.Models.Config
         /// <summary>
         /// The LDAP (or equivalent) Username associated with the Person. Used is <see cref="UsingExternalAuth"/> is enabled.
         /// </summary>
-        public string ExternalId { get; set; } = string.Empty;
+        public string ExternalId { get; set; }
 
         /// <summary>
         /// The password used to login. Value is only used to set the password on an Create/Update request.
@@ -42,22 +42,22 @@ namespace Platform.Models.Config
         /// <summary>
         /// Determines whether LDAP (or equivalent) integration should be used.
         /// </summary>
-        public bool UsingExternalAuth { get; set; }
+        public bool? UsingExternalAuth { get; set; }
 
         /// <summary>
         /// The Person's first name.
         /// </summary>
-        public string FirstName { get; set; } = string.Empty;
+        public string FirstName { get; set; }
 
         /// <summary>
         /// The Person's last name.
         /// </summary>
-        public string LastName { get; set; } = string.Empty;
+        public string LastName { get; set; }
 
         /// <summary>
         /// The Person's email address.
         /// </summary>
-        public string Email { get; set; } = string.Empty;
+        public string Email { get; set; }
 
         /// <summary>
         /// The DBID of the Folder location. When creating a new object, this must be set to the correct DBID of the target Folder.
@@ -65,7 +65,7 @@ namespace Platform.Models.Config
         /// <remarks>
         /// If zero, the object will be saved under "Persons" (the default folder).
         /// </remarks>
-        public int FolderId { get; set; }
+        public int? FolderId { get; set; }
 
         /// <summary>
         /// Full or partial CME object location path.
@@ -73,7 +73,7 @@ namespace Platform.Models.Config
         /// <remarks>
         /// Required for Update.
         /// </remarks>
-        public string FolderPath { get; set; } = string.Empty;
+        public string FolderPath { get; set; }
 
         /// <summary>
         /// Flag indicating the Person is an Agent. Can only be set on creation.
@@ -83,7 +83,7 @@ namespace Platform.Models.Config
         /// <summary>
         /// Name of the Config Server object.
         /// </summary>
-        public string Name { get; set; } = string.Empty;
+        public string Name { get; set; }
 
         /// <summary>
         /// The state of the Config Server object.

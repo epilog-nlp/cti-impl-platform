@@ -21,7 +21,7 @@ namespace Platform.Models.Config
         /// <summary>
         /// The parent Tenant DBID of the Config Server object.
         /// </summary>
-        public int TenantDbid { get; set; }
+        public int? TenantDbid { get; set; }
     }
 
     /// <summary>

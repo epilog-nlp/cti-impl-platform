@@ -13,16 +13,16 @@ namespace Platform.Models.Config
         /// <summary>
         /// DBID of the Host hosting this <see cref="Server"/>.
         /// </summary>
-        public int HostDbid { get; set; }
+        public int? HostDbid { get; set; }
 
         /// <summary>
         /// Port exposing this <see cref="Server"/>.
         /// </summary>
-        public string Port { get; set; } = string.Empty;
+        public string Port { get; set; }
 
         /// <summary>
         /// DBID of the <see cref="Application"/> defining the backup <see cref="Server"/>.
         /// </summary>
-        public int BackupServerDbid { get; set; }
+        public int? BackupServerDbid { get; set; }
     }
 }

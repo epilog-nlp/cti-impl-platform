@@ -16,17 +16,17 @@ namespace Platform.Models.Config
         /// <summary>
         /// DBID of the default Place object assigned to the Agent.
         /// </summary>
-        public int DefaultPlaceDbid { get; set; }
+        public int? DefaultPlaceDbid { get; set; }
 
         /// <summary>
         /// DBID of the Capacity Rule assigned to the Agent.
         /// </summary>
-        public int CapacityRuleDbid { get; set; }
+        public int? CapacityRuleDbid { get; set; }
 
         /// <summary>
         /// DBID of the Contract assigned to the Agent.
         /// </summary>
-        public int ContractDbid { get; set; }
+        public int? ContractDbid { get; set; }
 
         /// <summary>
         /// The Agent Logins assigned to this Agent.

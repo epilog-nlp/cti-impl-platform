@@ -15,7 +15,7 @@ namespace Platform.Models.Config
         /// <summary>
         /// Directory Number. Must be unique accross the parent Switch.
         /// </summary>
-        public string Number { get; set; } = string.Empty;
+        public string Number { get; set; }
 
         /// <summary>
         /// The type of DN this represents.
@@ -30,7 +30,7 @@ namespace Platform.Models.Config
         /// <summary>
         /// The DBID of the Switch where this DN resides.
         /// </summary>
-        public int SwitchDbid { get; set; }
+        public int? SwitchDbid { get; set; }
 
         /// <summary>
         /// The state of the Config Server object.

@@ -2,20 +2,11 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
-    <RootNamespace>Platform.Models.Config</RootNamespace>
-  </PropertyGroup>
-
-  <PropertyGroup>
-    <Description>Contains models related to Genesys Configuration exposed by their PSDK.</Description>
-    <PackageTags>Models Protocols CTI Config Genesys PSDK</PackageTags>
+    <RootNamespace>Cti.Platform.Adapters</RootNamespace>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Cti.Genesys.Models.Config" Version="0.0.2-alpha" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <ProjectReference Include="..\Cti.Genesys.Platform.Models\Cti.Genesys.Platform.Models.csproj" />
+    <PackageReference Include="Cti.Genesys.Models.Config" Version="0.0.1-beta" />
   </ItemGroup>
 
   <ItemGroup>

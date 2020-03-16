@@ -26,3 +26,6 @@
 /src/Providers/Cti.Genesys.Platform.Repos/bin/Debug/netstandard2.0
 /src/Providers/Cti.Genesys.Platform.Repos.Config/bin/Debug/netstandard2.0
 /src/Providers/Cti.Genesys.Platform.Repos.Config/obj
+/src/Adapters/Cti.Genesys.Platform.Adapters.Config/bin/Debug/netstandard2.0
+/src/Adapters/Cti.Genesys.Platform.Adapters.Config/obj
+/src/Adapters/nuget.config
