@@ -6,7 +6,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Cti.Genesys.Repos.Contracts.Config" Version="0.0.1-beta" />
+    <PackageReference Include="Cti.Genesys.Repos.Contracts.Config" Version="0.0.2-beta" />
   </ItemGroup>
 
   <ItemGroup>

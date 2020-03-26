@@ -5,7 +5,13 @@ VisualStudioVersion = 16.0.29806.167
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Cti.Genesys.Platform.Adapters", "Cti.Genesys.Platform.Adapters\Cti.Genesys.Platform.Adapters.csproj", "{6C323F7C-424B-449C-B4B5-A3B16D25DA0C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cti.Genesys.Platform.Adapters.Config", "Cti.Genesys.Platform.Adapters.Config\Cti.Genesys.Platform.Adapters.Config.csproj", "{F8475026-4B4F-4265-B1A0-6FF9F8B40DED}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Cti.Genesys.Platform.Adapters.Config", "Cti.Genesys.Platform.Adapters.Config\Cti.Genesys.Platform.Adapters.Config.csproj", "{F8475026-4B4F-4265-B1A0-6FF9F8B40DED}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Cti.Genesys.Platform.Models", "..\Models\Cti.Genesys.Platform.Models\Cti.Genesys.Platform.Models.csproj", "{CF1453B0-C9DF-4BBC-A3C6-DF6A16274A91}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Cti.Genesys.Platform.Models.Config", "..\Models\Cti.Genesys.Platform.Models.Config\Cti.Genesys.Platform.Models.Config.csproj", "{7E906247-C57A-4E31-A9C0-2F8DA25486DB}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Models", "Models", "{923AA5BE-47CE-452B-A731-D67491640CE3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,9 +27,21 @@ Global
 		{F8475026-4B4F-4265-B1A0-6FF9F8B40DED}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F8475026-4B4F-4265-B1A0-6FF9F8B40DED}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F8475026-4B4F-4265-B1A0-6FF9F8B40DED}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CF1453B0-C9DF-4BBC-A3C6-DF6A16274A91}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CF1453B0-C9DF-4BBC-A3C6-DF6A16274A91}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CF1453B0-C9DF-4BBC-A3C6-DF6A16274A91}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CF1453B0-C9DF-4BBC-A3C6-DF6A16274A91}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7E906247-C57A-4E31-A9C0-2F8DA25486DB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7E906247-C57A-4E31-A9C0-2F8DA25486DB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7E906247-C57A-4E31-A9C0-2F8DA25486DB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7E906247-C57A-4E31-A9C0-2F8DA25486DB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{CF1453B0-C9DF-4BBC-A3C6-DF6A16274A91} = {923AA5BE-47CE-452B-A731-D67491640CE3}
+		{7E906247-C57A-4E31-A9C0-2F8DA25486DB} = {923AA5BE-47CE-452B-A731-D67491640CE3}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {A7A71E1D-4E19-4B0A-A93D-056482CAD61B}

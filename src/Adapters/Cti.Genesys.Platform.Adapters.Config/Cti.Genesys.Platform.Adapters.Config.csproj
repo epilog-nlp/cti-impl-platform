@@ -6,7 +6,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Cti.Genesys.Models.Config" Version="0.0.1-beta" />
+    <ProjectReference Include="..\..\Models\Cti.Genesys.Platform.Models.Config\Cti.Genesys.Platform.Models.Config.csproj" />
   </ItemGroup>
 
   <ItemGroup>
