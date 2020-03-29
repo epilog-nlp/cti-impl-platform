@@ -42,7 +42,7 @@ namespace Platform.Models.Config
     /// <summary>
     /// A Genesys Config Server association between <see cref="Agent"/> and Login.
     /// </summary>
-    public class AgentLoginAssociation : ConfigObject<CfgAgentLoginInfo>, IAgentLoginAssociation
+    public class AgentLoginAssociation : PsdkObject<CfgAgentLoginInfo>, IAgentLoginAssociation
     {
         /// <summary>
         /// DBID of the Agent Login object assigned to the Agent.
@@ -58,7 +58,7 @@ namespace Platform.Models.Config
     /// <summary>
     /// An association between an <see cref="Agent"/> and a Skill.
     /// </summary>
-    public class AgentSkillLevel : ConfigObject<CfgSkillLevel>, IAgentSkillLevel
+    public class AgentSkillLevel : PsdkObject<CfgSkillLevel>, IAgentSkillLevel
     {
         /// <summary>
         /// DBID of the associated Skill object.
