@@ -11,7 +11,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Cti.Protocols.Contracts" Version="0.0.1-alpha" />
+    <PackageReference Include="Cti.Protocols.Contracts" Version="0.0.2-beta" />
   </ItemGroup>
 
   <ItemGroup>
