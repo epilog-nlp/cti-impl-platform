@@ -3,7 +3,7 @@
 
 using Genesyslab.Platform.Configuration.Protocols.Types;
 
-namespace Cti.Platform.Adapters
+namespace Platform.Adapters
 {
     /// <summary>
     /// Adapters for converting between Config Server PSDK enums and POCO types.

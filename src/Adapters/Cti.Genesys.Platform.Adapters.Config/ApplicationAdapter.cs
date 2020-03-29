@@ -2,11 +2,12 @@
 // See the LICENSE file in the project root for more information.
 
 using Genesyslab.Platform.ApplicationBlocks.ConfigurationObjectModel.CfgObjects;
-using Platform.Models.Config;
 using System.Linq;
 
-namespace Cti.Platform.Adapters
+namespace Platform.Adapters
 {
+    using Models.Config;
+
     /// <summary>
     /// Adapters for conversions between PSDK/CTI Application objects.
     /// </summary>

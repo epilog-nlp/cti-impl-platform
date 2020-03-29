@@ -11,7 +11,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Cti.Genesys.Platform.Config
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Repos", "Repos", "{B6AFEF0E-A847-4EC6-81FF-CCD2014B0874}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cti.Genesys.Platform.Repos", "Cti.Genesys.Platform.Repos\Cti.Genesys.Platform.Repos.csproj", "{198FD900-9E28-45BB-92C9-9E03ED66863D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Cti.Genesys.Platform.Repos", "Cti.Genesys.Platform.Repos\Cti.Genesys.Platform.Repos.csproj", "{198FD900-9E28-45BB-92C9-9E03ED66863D}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Models", "Models", "{821D647B-D32A-417A-ABAF-DD4BC0C6F6A9}"
 EndProject
@@ -19,9 +19,15 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Cti.Genesys.Platform.Models
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Cti.Genesys.Platform.Models.Config", "..\Models\Cti.Genesys.Platform.Models.Config\Cti.Genesys.Platform.Models.Config.csproj", "{3F5FEE7C-56AF-4F46-9409-974911C6ED67}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cti.Genesys.Platform.Repos.Config", "Cti.Genesys.Platform.Repos.Config\Cti.Genesys.Platform.Repos.Config.csproj", "{5FB06C72-A49F-4085-92B5-4450FE66304A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Cti.Genesys.Platform.Repos.Config", "Cti.Genesys.Platform.Repos.Config\Cti.Genesys.Platform.Repos.Config.csproj", "{5FB06C72-A49F-4085-92B5-4450FE66304A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cti.Genesys.Platform.Config.Extensions", "Cti.Genesys.Platform.Config.Extensions\Cti.Genesys.Platform.Config.Extensions.csproj", "{70D3BDB7-997C-475E-A265-398DBDE75045}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Cti.Genesys.Platform.Config.Extensions", "Cti.Genesys.Platform.Config.Extensions\Cti.Genesys.Platform.Config.Extensions.csproj", "{70D3BDB7-997C-475E-A265-398DBDE75045}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Adapters", "Adapters", "{BF751E50-7231-450D-AD0A-4359814A3175}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Cti.Genesys.Platform.Adapters.Config", "..\Adapters\Cti.Genesys.Platform.Adapters.Config\Cti.Genesys.Platform.Adapters.Config.csproj", "{96EB4469-71C0-4672-AF52-4E9A54F8F2A9}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Cti.Genesys.Platform.Adapters", "..\Adapters\Cti.Genesys.Platform.Adapters\Cti.Genesys.Platform.Adapters.csproj", "{A6F81FAA-28B5-47C1-9CCD-900F710F7AB6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -61,6 +67,14 @@ Global
 		{70D3BDB7-997C-475E-A265-398DBDE75045}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{70D3BDB7-997C-475E-A265-398DBDE75045}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{70D3BDB7-997C-475E-A265-398DBDE75045}.Release|Any CPU.Build.0 = Release|Any CPU
+		{96EB4469-71C0-4672-AF52-4E9A54F8F2A9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{96EB4469-71C0-4672-AF52-4E9A54F8F2A9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{96EB4469-71C0-4672-AF52-4E9A54F8F2A9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{96EB4469-71C0-4672-AF52-4E9A54F8F2A9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A6F81FAA-28B5-47C1-9CCD-900F710F7AB6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A6F81FAA-28B5-47C1-9CCD-900F710F7AB6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A6F81FAA-28B5-47C1-9CCD-900F710F7AB6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A6F81FAA-28B5-47C1-9CCD-900F710F7AB6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -70,6 +84,8 @@ Global
 		{34D51FA7-ACFD-4CCF-893D-4959249DBD75} = {821D647B-D32A-417A-ABAF-DD4BC0C6F6A9}
 		{3F5FEE7C-56AF-4F46-9409-974911C6ED67} = {821D647B-D32A-417A-ABAF-DD4BC0C6F6A9}
 		{5FB06C72-A49F-4085-92B5-4450FE66304A} = {B6AFEF0E-A847-4EC6-81FF-CCD2014B0874}
+		{96EB4469-71C0-4672-AF52-4E9A54F8F2A9} = {BF751E50-7231-450D-AD0A-4359814A3175}
+		{A6F81FAA-28B5-47C1-9CCD-900F710F7AB6} = {BF751E50-7231-450D-AD0A-4359814A3175}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {DB4645B5-5B2A-4D11-95FA-D1C2CAA0D9AA}

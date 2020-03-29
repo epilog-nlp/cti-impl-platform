@@ -10,6 +10,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\Adapters\Cti.Genesys.Platform.Adapters.Config\Cti.Genesys.Platform.Adapters.Config.csproj" />
     <ProjectReference Include="..\..\Models\Cti.Genesys.Platform.Models.Config\Cti.Genesys.Platform.Models.Config.csproj" />
     <ProjectReference Include="..\Cti.Genesys.Platform.Config.Extensions\Cti.Genesys.Platform.Config.Extensions.csproj" />
     <ProjectReference Include="..\Cti.Genesys.Platform.Config.Queries\Cti.Genesys.Platform.Config.Queries.csproj" />

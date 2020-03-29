@@ -3,10 +3,11 @@
 
 using Genesyslab.Platform.ApplicationBlocks.ConfigurationObjectModel;
 using Genesyslab.Platform.ApplicationBlocks.ConfigurationObjectModel.CfgObjects;
-using Platform.Models.Config;
 
-namespace Cti.Platform.Adapters
+namespace Platform.Adapters
 {
+    using Models.Config;
+
     /// <summary>
     /// Adapters for conversions between PSDK/CTI Host objects.
     /// </summary>
