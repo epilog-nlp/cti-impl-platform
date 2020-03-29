@@ -20,7 +20,7 @@ namespace Platform.Repos
         /// <summary>
         /// Name used to distinguish implementations sharing the same contract signature.
         /// </summary>
-        public abstract string Name { get; }
+        public virtual string Name => "";
 
         /// <summary>
         /// The <see cref="IProtocol"/> implementation capable of handling requests to Genesys.

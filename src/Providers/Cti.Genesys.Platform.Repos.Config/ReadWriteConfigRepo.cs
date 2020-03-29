@@ -13,9 +13,11 @@ namespace Platform.Repos.Config
     /// A repository exposing CRUD operations on Genesys Config Server objects.
     /// </summary>
     /// <typeparam name="TModel">The type of Config Server object.</typeparam>
+    /// <typeparam name="TContract">The contract for the Model exposed to consumers.</typeparam>
     /// <typeparam name="TPsdk">The corresponding PSDK type.</typeparam>
-    public abstract class ReadWriteConfigRepo<TModel, TPsdk> : ConfigObjectRepo<TModel, TPsdk>, IReadWriteConfigRepo<TModel>
-        where TModel : ConfigObject<TPsdk>, IQueryableConfigObject
+    public abstract class ReadWriteConfigRepo<TModel, TContract, TPsdk> : ConfigObjectRepo<TModel, TContract, TPsdk>, IReadWriteConfigRepo<TContract>
+        where TModel : ConfigObject<TPsdk>, TContract
+        where TContract : IQueryableConfigObject
         where TPsdk : CfgObject
     {
         /// <summary>
@@ -23,7 +25,7 @@ namespace Platform.Repos.Config
         /// </summary>
         /// <param name="itemToAdd">The item to add.</param>
         /// <returns>The created Config Server object, with all fields populated.</returns>
-        public virtual TModel Add(TModel itemToAdd)
+        public virtual TContract Add(TContract itemToAdd)
         {
             // TODO - Add Logging
             var psdkItem = ToPsdk(itemToAdd, ConfService);
@@ -36,7 +38,7 @@ namespace Platform.Repos.Config
         /// </summary>
         /// <param name="itemToUpdate">The existing item, with updated properties.</param>
         /// <returns>The updated Config Server object, with all fields populated.</returns>
-        public virtual TModel Update(TModel itemToUpdate) => Add(itemToUpdate);
+        public virtual TContract Update(TContract itemToUpdate) => Add(itemToUpdate);
 
         /// <summary>
         /// Enables a Config Server object with the provided <paramref name="dbid"/>.
@@ -67,12 +69,12 @@ namespace Platform.Repos.Config
         }
 
         /// <summary>
-        /// Adapter to convert from <typeparamref name="TModel"/> to <typeparamref name="TPsdk"/>.
+        /// Adapter to convert from <typeparamref name="TContract"/> to <typeparamref name="TPsdk"/>.
         /// </summary>
         /// <param name="ctiObject">The CTI object to translate.</param>
         /// <param name="service">A Config Service object capable of creating and saving the PSDK Config object.</param>
         /// <returns>A PSDK Model equivalent to the provided CTI Model, bound directly to Genesys.</returns>
-        protected abstract TPsdk ToPsdk(TModel ctiObject, IConfService service);
+        protected abstract TPsdk ToPsdk(TContract ctiObject, IConfService service);
 
         /// <summary>
         /// Method that sets the Enabled state of a PSDK object to the provided value.

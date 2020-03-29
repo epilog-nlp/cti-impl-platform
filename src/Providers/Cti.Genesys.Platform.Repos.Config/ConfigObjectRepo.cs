@@ -19,9 +19,11 @@ namespace Platform.Repos.Config
     /// A repository exposing retrieval methods for Genesys Config Server objects by their unique DBID.
     /// </summary>
     /// <typeparam name="TModel">The type of Config Server object.</typeparam>
+    /// <typeparam name="TContract">The contract for the Model exposed to consumers.</typeparam>
     /// <typeparam name="TPsdk">The corresponding PSDK type.</typeparam>
-    public abstract class ConfigObjectRepo<TModel, TPsdk> : PsdkRepo<TModel, ConfServerProtocol>, IConfigObjectRepo<TModel>
-        where TModel : ConfigObject<TPsdk>, IQueryableConfigObject
+    public abstract class ConfigObjectRepo<TModel, TContract, TPsdk> : PsdkRepo<TContract, ConfServerProtocol>, IConfigObjectRepo<TContract>
+        where TModel : ConfigObject<TPsdk>, TContract
+        where TContract : IQueryableConfigObject
         where TPsdk : CfgObject
     {
         /// <summary>
@@ -29,7 +31,7 @@ namespace Platform.Repos.Config
         /// </summary>
         /// <param name="dbid">The unique DBID of the object to retrieve.</param>
         /// <returns>The Config Server object with the provided <paramref name="dbid"/>, if it exists.</returns>
-        public virtual TModel Get(int dbid)
+        public virtual TContract Get(int dbid)
         {
             // TODO - Add Logging
             return FromPsdk(GetById(dbid));
@@ -41,13 +43,14 @@ namespace Platform.Repos.Config
         /// </summary>
         /// <param name="dbids">A collection of unique DBIDs of the objects to retrieve.</param>
         /// <returns>A collection of Config Server objects matching the provided <paramref name="dbids"/>.</returns>
-        public virtual IEnumerable<TModel> Get(params int[] dbids)
+        public virtual IEnumerable<TContract> Get(params int[] dbids)
         {
             // TODO - Add Logging
             var psdkItems = dbids.Any()
                 ? dbids.Select(GetById)
                 : GetAll();
-            return psdkItems.Select(FromPsdk);
+            return psdkItems.Select(FromPsdk)
+                            .ToList();
         }
 
         /// <summary>
@@ -56,11 +59,11 @@ namespace Platform.Repos.Config
         protected IConfService ConfService => Protocol.GetConfService();
 
         /// <summary>
-        /// Adapter to convert from <typeparamref name="TPsdk"/> to <typeparamref name="TModel"/>.
+        /// Adapter to convert from <typeparamref name="TPsdk"/> to <typeparamref name="TContract"/>.
         /// </summary>
         /// <param name="psdkObject">The PSDK Config object to translate.</param>
         /// <returns>A CTI Model equivalent to the provided PSDK object.</returns>
-        protected abstract TModel FromPsdk(TPsdk psdkObject);
+        protected abstract TContract FromPsdk(TPsdk psdkObject);
 
         /// <summary>
         /// Retrieves all PSDK objects without translating.
