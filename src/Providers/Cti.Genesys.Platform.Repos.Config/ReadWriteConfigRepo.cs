@@ -1,11 +1,11 @@
 ﻿// This source file is under MIT License (MIT).
 // See the LICENSE file in the project root for more information.
 
-using Genesyslab.Platform.ApplicationBlocks.ConfigurationObjectModel;
-using Platform.Models.Config;
+using Cti.Models.Config;
 using Cti.Repos.Config;
+using Genesyslab.Platform.ApplicationBlocks.ConfigurationObjectModel;
 
-namespace Cti.Platform.Repos.Config
+namespace Platform.Repos.Config
 {
     using Models.Config;
 
@@ -14,7 +14,7 @@ namespace Cti.Platform.Repos.Config
     /// </summary>
     /// <typeparam name="TModel">The type of Config Server object.</typeparam>
     /// <typeparam name="TPsdk">The corresponding PSDK type.</typeparam>
-    public abstract class ReadWriteConfigRepo<TModel,TPsdk> : ConfigObjectRepo<TModel,TPsdk>, IReadWriteConfigRepo<TModel>
+    public abstract class ReadWriteConfigRepo<TModel, TPsdk> : ConfigObjectRepo<TModel, TPsdk>, IReadWriteConfigRepo<TModel>
         where TModel : ConfigObject<TPsdk>, IQueryableConfigObject
         where TPsdk : CfgObject
     {

@@ -2,9 +2,14 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
-    <RootNamespace>Cti.Platform.Repos</RootNamespace>
+    <RootNamespace>Platform.Repos</RootNamespace>
   </PropertyGroup>
 
+  <PropertyGroup>
+    <Description>Contains implementations for Repositories exposing Genesys objects via their PSDK.</Description>
+    <PackageTags>Repo Repository Protocols CTI Genesys PSDK Platform</PackageTags>
+  </PropertyGroup>
+  
   <ItemGroup>
     <PackageReference Include="Cti.Genesys.Repos.Contracts" Version="0.0.1-beta" />
   </ItemGroup>

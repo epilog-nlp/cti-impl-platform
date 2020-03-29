@@ -1,17 +1,17 @@
 ﻿// This source file is under MIT License (MIT).
 // See the LICENSE file in the project root for more information.
 
-using Cti.Platform.Config.Extensions;
-using Cti.Platform.Config.Queries;
+using Cti.Models.Config;
 using Cti.Repos.Config;
 using Genesyslab.Platform.ApplicationBlocks.ConfigurationObjectModel;
 using Genesyslab.Platform.Configuration.Protocols;
-using Platform.Models.Config;
+using Platform.Config.Extensions;
+using Platform.Config.Queries;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace Cti.Platform.Repos.Config
+namespace Platform.Repos.Config
 {
     using Models.Config;
 
@@ -20,7 +20,7 @@ namespace Cti.Platform.Repos.Config
     /// </summary>
     /// <typeparam name="TModel">The type of Config Server object.</typeparam>
     /// <typeparam name="TPsdk">The corresponding PSDK type.</typeparam>
-    public abstract class ConfigObjectRepo<TModel,TPsdk> : PsdkRepo<TModel, ConfServerProtocol>, IConfigObjectRepo<TModel>
+    public abstract class ConfigObjectRepo<TModel, TPsdk> : PsdkRepo<TModel, ConfServerProtocol>, IConfigObjectRepo<TModel>
         where TModel : ConfigObject<TPsdk>, IQueryableConfigObject
         where TPsdk : CfgObject
     {
@@ -48,7 +48,7 @@ namespace Cti.Platform.Repos.Config
                 ? dbids.Select(GetById)
                 : GetAll();
             return psdkItems.Select(FromPsdk);
-        }  
+        }
 
         /// <summary>
         /// A Config Service object capable of handling requests. Built using the <see cref="PsdkRepo{TModel, TProtocol}.Protocol"/>.

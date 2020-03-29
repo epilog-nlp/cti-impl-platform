@@ -2,6 +2,12 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
+    <RootNamespace>Platform.Config.Extensions</RootNamespace>
+  </PropertyGroup>
+  
+  <PropertyGroup>
+    <Description>Library of utilities and extensions for facilitating common tasks using the Genesys Config Server PSDK.</Description>
+    <PackageTags>CTI Protocols Genesys Platform PSDK Config Extensions Util</PackageTags>
   </PropertyGroup>
 
   <ItemGroup>

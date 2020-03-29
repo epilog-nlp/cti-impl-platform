@@ -28,7 +28,7 @@ namespace Platform.Adapters
                 Dbid = app.DBID,
                 Enabled = app.State.IsEnabled(),
                 Name = app.Name,
-                TenantDbid = app.GetTenantDBIDs()?.FirstOrDefault()   
+                TenantDbid = app.GetTenantDBIDs()?.FirstOrDefault()
             };
 
         /// <summary>

@@ -8,11 +8,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
 
-namespace Cti.Platform.Config.Queries
+namespace Platform.Config.Queries
 {
     internal static class ReflectionResources
     {
-        
         public static IEnumerable<MethodInfo> FindReturningMethods(this Type source, Type returnType)
             => source.GetMethods()
                      .Where(m => returnType.IsAssignableFrom(m.ReturnType));

@@ -23,10 +23,10 @@ namespace Platform.Models.Config
         /// </summary>
         public string Password
         {
-            get => password; 
+            get => password;
             set
             {
-                if(!string.IsNullOrWhiteSpace(value) && !password.Equals(value))
+                if (!string.IsNullOrWhiteSpace(value) && !password.Equals(value))
                 {
                     IsPasswordChanged = true;
                     password = value;

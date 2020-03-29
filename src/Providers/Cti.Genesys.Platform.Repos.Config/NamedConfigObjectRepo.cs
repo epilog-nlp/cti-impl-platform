@@ -1,13 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-// This source file is under MIT License (MIT).
+﻿// This source file is under MIT License (MIT).
 // See the LICENSE file in the project root for more information.
 
-using Platform.Models.Config;
+using Cti.Models.Config;
 using Genesyslab.Platform.ApplicationBlocks.ConfigurationObjectModel;
 
-namespace Cti.Platform.Repos.Config
+namespace Platform.Repos.Config
 {
     using Models.Config;
 
@@ -16,7 +13,7 @@ namespace Cti.Platform.Repos.Config
     /// </summary>
     /// <typeparam name="TModel">The type of Config Server object.</typeparam>
     /// <typeparam name="TPsdk">The corresponding PSDK type.</typeparam>
-    public abstract class NamedConfigObjectRepo<TModel,TPsdk> : ConfigObjectRepo<TModel,TPsdk>
+    public abstract class NamedConfigObjectRepo<TModel, TPsdk> : ConfigObjectRepo<TModel, TPsdk>
         where TModel : ConfigObject<TPsdk>, IQueryableConfigObject, INamedConfigObject
         where TPsdk : CfgObject
     {

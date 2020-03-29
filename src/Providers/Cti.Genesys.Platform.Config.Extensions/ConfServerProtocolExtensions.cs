@@ -4,7 +4,7 @@
 using Genesyslab.Platform.ApplicationBlocks.ConfigurationObjectModel;
 using Genesyslab.Platform.Configuration.Protocols;
 
-namespace Cti.Platform.Config.Extensions
+namespace Platform.Config.Extensions
 {
     /// <summary>
     /// Contains methods extending normal <see cref="ConfServerProtocol"/> behaviour.

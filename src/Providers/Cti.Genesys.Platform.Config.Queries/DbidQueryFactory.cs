@@ -7,7 +7,7 @@ using System;
 using System.Collections.Immutable;
 using System.Linq;
 
-namespace Cti.Platform.Config.Queries
+namespace Platform.Config.Queries
 {
     using static AbstractQueryFactory;
     using static ReflectionResources;
@@ -17,7 +17,6 @@ namespace Cti.Platform.Config.Queries
     /// </summary>
     public static class DbidQueryFactory
     {
-
         /// <summary>
         /// Constructs a delegate capable of retrieving a Configuration Object of type <typeparamref name="TCfgObject"/> by its DBID.
         /// </summary>
@@ -39,7 +38,7 @@ namespace Cti.Platform.Config.Queries
 
         private static CfgFilterBasedQuery CreateDbidQuery(IConfService service, Type queryType, int dbid)
         {
-            if(!dbidQueries.Value.Contains(queryType))
+            if (!dbidQueries.Value.Contains(queryType))
                 throw new InvalidOperationException($"The provided query type is not valid for filtering by DBID: {queryType.FullName}");
             var query = CreateQuery(service, queryType);
             queryType.GetProperty(DbidProperty).SetValue(query, dbid);

@@ -7,7 +7,7 @@ using System;
 using System.Collections.Generic;
 using System.Collections.Immutable;
 
-namespace Cti.Platform.Config.Queries
+namespace Platform.Config.Queries
 {
     using static ReflectionResources;
 
@@ -55,7 +55,7 @@ namespace Cti.Platform.Config.Queries
         internal static IReadOnlyDictionary<Type, Type> ObjectToQueryMap => objectToQueryMap.Value;
 
         private static readonly Lazy<ImmutableDictionary<Type, Type>> objectToQueryMap
-            = new Lazy<ImmutableDictionary<Type, Type>>(() => 
+            = new Lazy<ImmutableDictionary<Type, Type>>(() =>
                 FilterQueries.ToImmutableDictionary(
                     GetQueryReturnType, // Key Selector
                     val => val));

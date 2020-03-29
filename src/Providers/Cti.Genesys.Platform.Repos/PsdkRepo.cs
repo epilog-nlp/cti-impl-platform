@@ -2,13 +2,12 @@
 // See the LICENSE file in the project root for more information.
 
 using Cti.Repos;
+using Cti.Protocols.Contracts;
+using Cti.Models;
 using Genesyslab.Platform.Commons.Protocols;
 
-namespace Cti.Platform.Repos
+namespace Platform.Repos
 {
-    using Protocols.Contracts;
-    using Models;
-
     /// <summary>
     /// Base type for all PSDK Repository Features exposing Genesys objects.
     /// </summary>

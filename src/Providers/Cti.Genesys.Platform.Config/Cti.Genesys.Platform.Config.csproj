@@ -5,6 +5,11 @@
     <RootNamespace>Cti.Platform.Config</RootNamespace>
   </PropertyGroup>
 
+  <PropertyGroup>
+    <Description>Contains specialized types for using the Genesys Config Server PSDK to expose CTI functionality</Description>
+    <PackageTags>CTI Protocols Genesys Platform PSDK Config</PackageTags>
+  </PropertyGroup>
+
   <ItemGroup>
     <ProjectReference Include="..\Cti.Genesys.Platform\Cti.Genesys.Platform.csproj" />
   </ItemGroup>

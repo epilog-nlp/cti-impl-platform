@@ -5,6 +5,11 @@
     <RootNamespace>Cti.Platform</RootNamespace>
   </PropertyGroup>
 
+  <PropertyGroup>
+    <Description>Contains implementations for CTI functionality exposed to consumers using the Genesys PSDK.</Description>
+    <PackageTags>CTI Protocols Genesys Platform PSDK</PackageTags>
+  </PropertyGroup>
+
   <ItemGroup>
     <PackageReference Include="Cti.Protocols.Contracts" Version="0.0.1-alpha" />
   </ItemGroup>

@@ -16,10 +16,10 @@ namespace Platform.Models.Config
         /// <summary>
         /// Identifier for the type of the Application object.
         /// </summary>
-        public int AppType 
-        { 
-            get => (int)CfgAppType; 
-            set => CfgAppType = (CfgAppType)value; 
+        public int AppType
+        {
+            get => (int)CfgAppType;
+            set => CfgAppType = (CfgAppType)value;
         }
 
         /// <summary>

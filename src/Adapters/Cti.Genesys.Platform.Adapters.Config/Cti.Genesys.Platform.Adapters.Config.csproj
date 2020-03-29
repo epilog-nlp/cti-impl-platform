@@ -1,10 +1,15 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
     <RootNamespace>Platform.Adapters</RootNamespace>
   </PropertyGroup>
 
+  <PropertyGroup>
+    <Description>Contains adapters for conversions between PSDK and CTI Config Server objects.</Description>
+    <PackageTags>Adapters Platform PSDK CTI Genesys Config Protocols</PackageTags>
+  </PropertyGroup>
+  
   <ItemGroup>
     <ProjectReference Include="..\..\Models\Cti.Genesys.Platform.Models.Config\Cti.Genesys.Platform.Models.Config.csproj" />
   </ItemGroup>
